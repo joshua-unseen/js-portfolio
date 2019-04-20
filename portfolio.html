@@ -36,48 +36,7 @@
                 <h1>Portfolio</h1>
             </div>
             <div class="container pt-3">
-                <div class="card-columns">
-                    <div class="card">
-                        <a href="#">
-                            <img src="assets/images/crowd.jpg" class="card-img" alt="mannequins">
-                            <div class="card-img-overlay d-flex align-items-end pb-1 pl-0 pr-0">
-                                <div class="container bg-info text-light text-center">Item</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <img src="assets/images/snow.jpg" class="card-img" alt="snow">
-                            <div class="card-img-overlay d-flex align-items-end pb-1 pl-0 pr-0">
-                                <div class="container bg-info text-light text-center">Item</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <img src="assets/images/sunset.jpg" class="card-img" alt="sunset">
-                            <div class="card-img-overlay d-flex align-items-end pb-1 pl-0 pr-0">
-                                <div class="container bg-info text-light text-center">Item</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <img src="assets/images/firework.jpg" class="card-img" alt="fireworks">
-                            <div class="card-img-overlay d-flex align-items-end pb-1 pl-0 pr-0">
-                                <div class="container bg-info text-light text-center">Item</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#">
-                            <img src="assets/images/waterfall.jpg" class="card-img" alt="waterfall">
-                            <div class="card-img-overlay d-flex align-items-end pb-1 pl-0 pr-0">
-                                <div class="container bg-info text-light text-center">Item</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <div class="card-columns" id="portfolio-div"></div>
             </div>
         </div>
     </div>
@@ -94,6 +53,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="assets/js/portfolio.js"></script>
+    <script>
+        $(function() {
+            portfolio.BuildView();
+        })
+    </script>
 </body>
 
 </html>
