@@ -39,10 +39,13 @@ var portfolio = {
             var liveURL = "https://" + this.works[i].author + ".github.io/" + this.works[i].repoName;
             var imgURL = "assets/images/" + this.works[i].repoName + ".png";
 
-            var newCard = $("<div class=\"card\">");
+            var repoButton = $("<a href=\"" + repoURL + "\" class=\"btn btn-danger\">");
+            var liveButton = $("<a href=\"" + liveURL + "\" class=\"btn btn-danger\">");
+
+            var newCard = $("<div class=\"card p-item\">");
             $("<img src=\"" + imgURL + "\" class=\"card-img\" alt=\"" + name + "\">").appendTo(newCard);
-            $("<div class=\"card-img-overlay d-flex align-items-end pb-1 pl-0 pr-0\">").html(
-                "<div class=\"container bg-info text-light text-center\">" + name + "</div>"
+            $("<div class=\"card-img-overlay d-flex align-items-end pb-2 pl-0 pr-0\">").html(
+                "<div class=\"container bg-danger text-light text-center pb-1\">" + name + "</div>"
             ).appendTo(newCard);
             $("#portfolio-div").prepend(newCard);
         }
