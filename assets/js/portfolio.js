@@ -39,14 +39,16 @@ var portfolio = {
             var liveURL = "https://" + this.works[i].author + ".github.io/" + this.works[i].repoName;
             var imgURL = "assets/images/" + this.works[i].repoName + ".png";
 
-            var repoButton = $("<a href=\"" + repoURL + "\" class=\"btn btn-danger\">");
-            var liveButton = $("<a href=\"" + liveURL + "\" class=\"btn btn-danger\">");
+            var repoButton = $("<a href=\"" + repoURL + "\" target=\"_blank\" class=\"btn btn-primary\">").text("Go to Repo");
+            var liveButton = $("<a href=\"" + liveURL + "\" target=\"_blank\" class=\"btn btn-primary\">").text("Go to Site");
+            var buttonDiv = $("<div class=\"button-div d-flex justify-content-around mb-5\">").append(repoButton).append(liveButton);
 
-            var newCard = $("<div class=\"card p-item\">");
+            var newCard = $("<div class=\"card position-relative p-item\">");
+            
             $("<img src=\"" + imgURL + "\" class=\"card-img\" alt=\"" + name + "\">").appendTo(newCard);
-            $("<div class=\"card-img-overlay d-flex align-items-end pb-2 pl-0 pr-0\">").html(
+            $("<div class=\"card-img-overlay d-flex flex-column align-items-stretch justify-content-end pb-2 pl-0 pr-0\">").html(
                 "<div class=\"container bg-danger text-light text-center pb-1\">" + name + "</div>"
-            ).appendTo(newCard);
+            ).prepend(buttonDiv).appendTo(newCard);
             $("#portfolio-div").prepend(newCard);
         }
     }
